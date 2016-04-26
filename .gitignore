@@ -10,6 +10,9 @@
 # http://github.com/RailsApps/rails-composer/issues
 #----------------------------------------------------------------------------
 
+/config/initializers/devise.rb
+/config/secrets.yml
+
 # bundler state
 /.bundle
 /vendor/bundle/
