@@ -1,2 +1,52 @@
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container" ID="landing-contain">
+    <h1>lessonDB</h1>
+    <h3>Find and share lesson plans</h3>
+
+    <%= render 'form' %>
+
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>All your files, Everywhere</h2>
+      <p>Download and print your lessons from any computer with internet access</p>
+      <p><a class="btn btn-default" href="#" role="button">Sign Up &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Stand on the Shoulders of Giants</h2>
+      <p>Find lessons created by other teachers</p>
+      <p><a class="btn btn-default" href="#" role="button">Find lessons &raquo;</a></p>
+   </div>
+    <div class="col-md-4">
+      <h2>Battle-tested Lessons</h2>
+      <p>Community-reviewed, State and Federal standards documented</p>
+      <p><a class="btn btn-default" href="#" role="button">See Standards &raquo;</a></p>
+    </div>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p>Site Design by Robert Anderson</p>
+  </footer>
+</div> <!-- /container -->
+
+<script>
+  $('li').onclick = function(){
+    alert('test');
+  }
+</script>
+
