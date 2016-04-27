@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Search</h1>
+<%= render 'searches/advancedSearch' %>
+
+<% if @results.empty? %>
+  <h2>No results found</h2>
+  <br>
+  <h1>Lesson List</h1>
+  <% output = @lessons %>
+<% else %>
+  <h2>Search Results:</h2>
+  <% output = @results %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Grade</th>
+      <th>Subject</th>
+      <th>State</th>
+      <th>Ese</th>
+      <th>Standards</th>
+      <th>Author</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% output.each do |lesson| %>
+      <tr>
+        <td><%= lesson.title %></td>
+        <td><%= lesson.grade %></td>
+        <td><%= lesson.subject %></td>
+        <td><%= lesson.state %></td>
+        <td><%= lesson.ese %></td>
+        <td><%= lesson.standards %></td>
+        <td><%= lesson.author %></td>
+        <td><%= link_to 'View Lesson', lesson %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
