@@ -87,4 +87,7 @@ class LessonsController < ApplicationController
         redirect_to page_path('denied')
       end
     end
+
+    def filter
+    end
 end
