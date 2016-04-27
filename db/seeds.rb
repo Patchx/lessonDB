@@ -10,4 +10,5 @@ puts 'CREATED ADMIN USER: ' << user.email
 
 Lesson.create(title: "MyString", grade: "MyString",
 							subject: "MyString", state: "MyString",
-							ese: false, standards: "MyString")
+							ese: false, standards: "MyString",
+							user_id: 1)
