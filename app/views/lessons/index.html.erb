@@ -4,9 +4,13 @@
 <%= render 'lessons/basicSearch' %>
 <br>
 
-<h1><%= @results %></h1>
-
-<h1>Lessons</h1>
+<% if @results.empty? %>
+  <h1>No results found</h1>
+  <% output = @results %>
+<% else %>
+  <h1>Search Results:</h1>
+  <% output = @lessons %>
+<% end %>
 
 <table>
   <thead>
@@ -23,7 +27,7 @@
   </thead>
 
   <tbody>
-    <% @lessons.each do |lesson| %>
+    <% output.each do |lesson| %>
       <tr>
         <td><%= lesson.title %></td>
         <td><%= lesson.grade %></td>

@@ -7,6 +7,7 @@ class LessonsController < ApplicationController
   # GET /lessons.json
   def index
     @lessons = Lesson.all
+    @results = Lesson.fuzzy_search(params[:query])
   end
 
   # GET /lessons/1
@@ -88,6 +89,4 @@ class LessonsController < ApplicationController
       end
     end
 
-    def filter
-    end
 end

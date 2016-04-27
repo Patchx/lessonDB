@@ -1,4 +1,4 @@
 <p>
   <%= text_field_tag :search %>
-  <a href="/lessons" class="btn btn-success">Search</a>
+  <%= link_to "Search", '/lessons?query=value1', :class => "btn btn-success" %>
 </p>
