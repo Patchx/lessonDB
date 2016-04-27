@@ -1,6 +1,7 @@
 class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :check_permission, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new]
 
   # GET /lessons
   # GET /lessons.json
@@ -79,5 +80,11 @@ class LessonsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def lesson_params
       params.require(:lesson).permit(:title, :grade, :subject, :state, :ese, :standards, :user_id, :author)
+    end
+
+    def check_permission
+      unless authorized?(@lesson)
+        redirect_to page_path('denied')
+      end
     end
 end
