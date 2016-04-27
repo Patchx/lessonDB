@@ -26,6 +26,14 @@ class LessonsController < ApplicationController
   def create
     @lesson = Lesson.new(lesson_params)
 
+    if current_user.nil?
+      @lesson.user_id = nil
+      @lesson.author = 'anonymous'
+    else
+      @lesson.user_id = current_user.id
+      @lesson.author = User.find(@lesson.user_id).name
+    end
+
     respond_to do |format|
       if @lesson.save
         format.html { redirect_to @lesson, notice: 'Lesson was successfully created.' }

@@ -32,9 +32,14 @@
 
 <p>
   <strong>Author:</strong>
-  <%= User.find(@lesson.user_id).name %>
+  <%= @lesson.author %>
 </p>
 
-<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
-<%= link_to 'Destroy', @lesson, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% if user_signed_in? %>
+  <% if @lesson.user_id == current_user.id %>
+    <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+    <%= link_to 'Destroy', @lesson, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <% end %>
+<% end %>
+
 <%= link_to 'Back', lessons_path %>

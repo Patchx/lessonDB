@@ -25,7 +25,7 @@
         <td><%= lesson.state %></td>
         <td><%= lesson.ese %></td>
         <td><%= lesson.standards %></td>
-        <td><%= User.find(lesson.user_id).name %></td>
+        <td><%= lesson.author %></td>
         <td><%= link_to 'View Lesson', lesson %></td>
       </tr>
     <% end %>
