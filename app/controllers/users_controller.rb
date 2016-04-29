@@ -2,9 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:index]
 
   def index
-    unless admin?
-      redirect_to page_path('denied')
-    end
+    redirect_to page_path('denied') unless authorized?
     @users = User.all
   end
 

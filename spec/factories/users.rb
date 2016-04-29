@@ -6,6 +6,7 @@ FactoryGirl.define do
   end
 
   factory :admin, class: User do
+    admin true
     name "Admin"
     email "robert.anderson.fl@gmail.com"
     password "please123"
