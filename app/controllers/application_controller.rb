@@ -19,7 +19,17 @@ class ApplicationController < ActionController::Base
 	def authorized?(input)
 	  return false unless user_signed_in?
 	  return true if admin?
-	  return input.user_id == current_user.id
+
+	  if input.class == Lesson
+		  return input.user_id == current_user.id
+		end
+
+		if input.class == User
+		  return input.id == current_user.id
+		end
+
+		# If nothing else returns, default return is false
+		return false
 	end	
 
 end
