@@ -12,8 +12,8 @@ feature 'Navigation links', :devise do
     visit root_path
     expect(page).to have_content 'lessonDB'
     expect(page).to have_content 'Search'
-    expect(page).to have_content 'Sign in'
-    expect(page).to have_content 'Sign up'
+    expect(page).to have_content 'Login'
+    expect(page).to have_content 'Register'
   end
 
 end
