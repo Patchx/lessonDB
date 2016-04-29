@@ -10,6 +10,8 @@
 # http://github.com/RailsApps/rails-composer/issues
 #----------------------------------------------------------------------------
 
+# Contains passwords
+/app.json
 /config/initializers/devise.rb
 /config/secrets.yml
 /config/cloudinary.yml
@@ -26,7 +28,7 @@ db/*.sqlite3
 /tmp/*
 
 # add /config/database.yml if it contains passwords
-# /config/database.yml
+/config/database.yml
 
 # various artifacts
 **.war
