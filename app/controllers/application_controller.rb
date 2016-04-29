@@ -15,9 +15,7 @@ class ApplicationController < ActionController::Base
 
 	  if input.class == Lesson
 		  return input.user_id == current_user.id
-		end
-
-		if input.class == User
+		elsif input.class == User
 		  return input.id == current_user.id
 		end
 
