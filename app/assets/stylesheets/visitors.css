@@ -23,7 +23,6 @@
 @media screen and (max-aspect-ratio: 4/4) {
 	#landing-contain {
 		margin: 70% 2% 0% 2%;
-		background: none;
 	}
 }
 @media screen and (max-width: 800px) {
