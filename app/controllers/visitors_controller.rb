@@ -1,5 +1,5 @@
 class VisitorsController < ApplicationController
-	def index
+	def home
 		@search = Search.new
 	end
 end
