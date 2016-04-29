@@ -10,13 +10,14 @@
 # http://github.com/RailsApps/rails-composer/issues
 #----------------------------------------------------------------------------
 
-# Contains passwords
+# ---- IMPORTANT ----
+# These files are needed, but contain sensitive info
+# Make sure they are deployed to production,
+# but are not visible on GitHub
 /app.json
 /config/initializers/devise.rb
 /config/secrets.yml
 /config/cloudinary.yml
-
-# add /config/database.yml if it contains passwords
 /config/database.yml
 
 # bundler state
