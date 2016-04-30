@@ -18,7 +18,6 @@
 /config/initializers/devise.rb
 /config/secrets.yml
 /config/cloudinary.yml
-/config/database.yml
 
 # bundler state
 /.bundle
