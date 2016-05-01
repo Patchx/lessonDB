@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= f.attachinary_file_field :file %>
+    <%= f.label 'Supported file types: png, jpg, gif, pdf' %><br>
+  </div>
+
+  <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>

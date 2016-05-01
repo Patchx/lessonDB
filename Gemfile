@@ -13,9 +13,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'textacular', '~> 3.0'
 
 # Image uploading and storage
-gem 'carrierwave'
 gem 'cloudinary'
-
+gem 'attachinary'
 
 group :development, :test do
   gem 'byebug'

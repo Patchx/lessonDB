@@ -6,6 +6,9 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# For image uploads with attachinary gem
+require "attachinary/orm/active_record"
+
 module LessonDB
   class Application < Rails::Application
 

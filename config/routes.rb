@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   resources :lessons
   resources :searches
 
+  # For attachinary gem (file upload)
+	mount Attachinary::Engine => "/attachinary"
+
 end
