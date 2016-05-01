@@ -90,5 +90,3 @@ pickle-email-*.html
 # Ignore application configuration
 # Figaro gem
 /config/application.yml
-# Rails 4 key hiding feature
-/config/secrets.yml
