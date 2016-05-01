@@ -15,7 +15,6 @@
 # Make sure they are deployed to production,
 # but are not visible on GitHub
 /app.json
-/config/initializers/devise.rb
 /config/secrets.yml
 /config/cloudinary.yml
 
