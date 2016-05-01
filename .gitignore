@@ -15,7 +15,7 @@
 # Make sure they are deployed to production,
 # but are not visible on GitHub
 /app.json
-/config/secrets.yml
+
 
 # bundler state
 /.bundle
@@ -88,4 +88,7 @@ pickle-email-*.html
 *~
 
 # Ignore application configuration
+# Figaro gem
 /config/application.yml
+# Rails 4 key hiding feature
+/config/secrets.yml
