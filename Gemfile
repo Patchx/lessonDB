@@ -16,6 +16,9 @@ gem 'textacular', '~> 3.0'
 gem 'cloudinary'
 gem 'attachinary'
 
+# Keeping secrets on Heroku, out of GitHub
+gem 'figaro'
+
 group :development, :test do
   gem 'byebug'
 end
