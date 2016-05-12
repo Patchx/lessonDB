@@ -12,6 +12,7 @@ class LessonsController < ApplicationController
   # GET /lessons/1
   # GET /lessons/1.json
   def show
+    # Cloudinary::Api.update(@lesson.file.path, :raw_convert => "aspose", :resource_type => :raw)    
   end
 
   # GET /lessons/new

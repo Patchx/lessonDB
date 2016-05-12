@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.attachinary_file_field :file %>
+    <%= f.attachinary_file_field :file, :resource_type => 'raw', :raw_convert => 'aspose' %>
     <%= f.label 'Supported file types: png, jpg, gif, pdf' %><br>
   </div>
 

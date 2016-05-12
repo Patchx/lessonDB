@@ -36,7 +36,7 @@
 </p>
 
 <p>
-  <%= cl_image_tag(@lesson.file.path, :crop => :fill) unless @lesson.file.nil? %>
+  <%= cl_image_tag("#{@lesson.file.public_id}.jpg", :crop => :fill) unless @lesson.file.nil? %>
 </p>
 
 <% if authorized?(@lesson) %>
