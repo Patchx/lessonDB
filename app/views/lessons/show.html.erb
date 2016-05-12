@@ -1,39 +1,52 @@
 <br>
 
-<p>
-  <strong>Title:</strong>
-  <%= @lesson.title %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <p>
+        <strong>Title:</strong>
+        <%= @lesson.title %>
+      </p>
 
-<p>
-  <strong>Grade:</strong>
-  <%= @lesson.grade %>
-</p>
+      <p>
+        <strong>Author:</strong>
+        <%= @lesson.author %>
+      </p>
 
-<p>
-  <strong>Subject:</strong>
-  <%= @lesson.subject %>
-</p>
+      <p>
+        <strong>Document Hyperlink:</strong>
+        <a href="<%= @lesson.hyperlink %>"></a>
+      </p>
+    </div>
+    <div class="col-xs-6">
+      <p>
+        <strong>Grade:</strong>
+        <%= @lesson.grade %>
+      </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @lesson.state %>
-</p>
+      <p>
+        <strong>Subject:</strong>
+        <%= @lesson.subject %>
+      </p>
 
-<p>
-  <strong>Ese:</strong>
-  <%= @lesson.ese %>
-</p>
+      <p>
+        <strong>State:</strong>
+        <%= @lesson.state %>
+      </p>
 
-<p>
-  <strong>Standards:</strong>
-  <%= @lesson.standards %>
-</p>
+      <p>
+        <strong>Ese:</strong>
+        <%= @lesson.ese %>
+      </p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @lesson.author %>
-</p>
+      <p>
+        <strong>Standards:</strong>
+        <%= @lesson.standards %>
+      </p>
+    </div>
+  </div>
+</div>
+
 
 <p>
   <%= cl_image_tag("#{@lesson.file.public_id}.jpg", :crop => :fill) unless @lesson.file.nil? %>

@@ -1,3 +1,4 @@
+<br>
 <%= form_for(@lesson) do |f| %>
   <% if @lesson.errors.any? %>
     <div id="error_explanation">
@@ -11,36 +12,52 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.attachinary_file_field :file, :resource_type => 'auto', :raw_convert => 'aspose' %>
-    <%= f.label 'Supported file types: png, jpg, gif, pdf' %><br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="field">
+          <%= f.label :title %><br>
+          <%= f.text_field :title %>
+        </div>
+        <div class="field">
+          <%= f.label "Google Drive, Dropbox, etc" %><br>
+          <%= f.text_field :hyperlink %>
+        </div>
+        <br>        
+        <div class="field">
+          <%= f.attachinary_file_field :file, :resource_type => 'auto', :raw_convert => 'aspose' %>
+          <%= f.label 'Supported file types: png, jpg, gif, pdf' %>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="field">
+          <%= f.label :grade %><br>
+          <%= f.text_field :grade %>
+        </div>
+        <div class="field">
+          <%= f.label :subject %><br>
+          <%= f.text_field :subject %>
+        </div>
+        <div class="field">
+          <%= f.label :state %><br>
+          <%= f.text_field :state %>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="field">
+          <%= f.label :standards %><br>
+          <%= f.text_field :standards %>
+        </div>
+        <div class="field">
+          <%= f.label :ese %><br>
+          <%= f.check_box :ese %>
+        </div>
+      </div>      
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :grade %><br>
-    <%= f.text_field :grade %>
-  </div>
-  <div class="field">
-    <%= f.label :subject %><br>
-    <%= f.text_field :subject %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :ese %><br>
-    <%= f.check_box :ese %>
-  </div>
-  <div class="field">
-    <%= f.label :standards %><br>
-    <%= f.text_field :standards %>
-  </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>
+  <br>
 <% end %>
